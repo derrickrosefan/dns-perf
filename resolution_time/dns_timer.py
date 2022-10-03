@@ -1,11 +1,12 @@
 import subprocess
 import re
 
-def get_ip_address_and_dns_query_time(hostname, dns_target):
+
+def get_ip_address_and_dns_query_time(hostname, target_resolver):
     output = subprocess.check_output(
-        [f"dig @{dns_target} {hostname} +noall +answer +stats"], shell=True,
+        [f"dig @{target_resolver} {hostname} +noall +answer +stats"], shell=True,
     ).decode()
-    print(hostname, "@", dns_target)
+    print(hostname, "@", target_resolver)
     ip_address = re.search(r"([0-9]{1,3}\.){3}[0-9]{1,3}$", output, re.MULTILINE).group(
         0
     )
