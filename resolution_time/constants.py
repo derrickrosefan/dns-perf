@@ -12,7 +12,7 @@ HOSTNAMES = [
 ]
 
 PUBLIC_DNS = "8.8.8.8"
-LOCAL_DNS = "1.1.1.1"
+LOCAL_DNS = "129.105.5.98"
 NUM_TRIALS_PER_HOSTNAME = 20
 PUBLIC_DNS_CSV_PATH = "./public_dns.csv"
 LOCAL_DNS_CSV_PATH = "./local_dns.csv"
