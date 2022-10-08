@@ -16,7 +16,7 @@ const URLs = [
 ];
 
 const NUM_RUNS_PER_URL = 10;
-const FILE_PATH = "./results_public.json"
+const FILE_PATH = "./public_dns.json"
 
 const test = async () => {
     const results = URLs.reduce((prev, url) => ({ ...prev, [url]: [] }), {});
